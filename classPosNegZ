@@ -1,0 +1,54 @@
+/*
+Program Name: Pos Neg Zero Decider
+Author:ENR 102 CLASS
+Date: 2/7/19
+Program Description: This program will determine if the number you enter is either positive, negative, or zero. User can enter an integer or a floating point number. Program outputs...
+
+### Get rid of steps to problem after writing program descrip.###
+Steps to solve problem:
+1- Output message to user explaining what the program does and how it works (cout statements)
+2- Ask user to input number, can be integer, floating point, pos, neg, or zero
+3- Bring in user's number and store in num, data type double
+3a- Output number for user
+4- Use if to check if num is neg... If (num < 0) "number is negative"
+5- Else if (num==0) "number is zero"
+6- else output "number is positive"
+7- Output "Thank you and goodbye" and end program (return 0)
+*/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	double num; //user input number to determine if positive, negative, or zero and also output to show user their number
+
+	//Output message to user explaining what the program does and how it works(cout statements)
+	cout << "This program will determine if the number you enter is either positive, negative, or zero. You can enter an integer" << endl << " or a floating point number.";
+
+		//Ask user to input number, can be integer, floating point, pos, neg, or zero
+		cout << "Please enter a number: ";
+
+	//Bring in user's number and store in num, data type double
+	cin >> num;
+
+	//Output number for user
+	cout << fixed << showpoint << setprecision(7); //Show trailing zeros and 7 decimal places
+	cout << endl << "Your number is: " << num << endl;
+
+	//First test if num is less than 0, then test if equal to 0, all other tests lead to a positive number
+	if (num < 0)
+		cout << "Your number is negative!" << endl;
+	else if (num == 0)
+		cout << "Your number is zero!" << endl;
+	else
+		cout << "Your number is positive!" << endl;
+
+	//Farewell message and end
+	cout << "Thank you and goodbye!" << endl;
+
+		return 0;
+
+
+}
+
